@@ -1,0 +1,9 @@
+DEBUG [2019-06-22 12:56:27] E:\python\framework1\home_application\views.py 18 <module> 7436 7784 
+ 	 debug日志信息 
+
+INFO [2019-06-22 12:56:27] E:\python\framework1\home_application\views.py 19 <module> 7436 7784 
+ 	 info日志信息 
+
+ERROR [2019-06-22 12:56:27] E:\python\framework1\home_application\views.py 20 <module> 7436 7784 
+ 	 info日志信息 
+

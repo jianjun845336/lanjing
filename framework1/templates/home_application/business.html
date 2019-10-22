@@ -1,0 +1,37 @@
+<!--
+如果没有引用以下文件，请去掉此注释-->
+<link href="https://magicbox.bk.tencent.com/static_api/v3/assets/select2-3.5.2/select2.css" rel="stylesheet">
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+<script src="https://magicbox.bk.tencent.com/static_api/v3/assets/select2-3.5.2/select2.js"></script>
+
+<div class="plugin3_demo" id="plugin3_demo3" style="display:inline-block;">
+    <!-- select2 通过ajax start -->
+    <div class="select2-container select2_box" id="s2id_autogen5" style="width:300px;">
+        <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
+            <span class="select2-chosen" id="select2-chosen-6">&nbsp;</span>
+            <abbr class="select2-search-choice-close"></abbr>
+            <span class="select2-arrow" role="presentation">
+                <b role="presentation"></b>
+            </span></a>
+        <label for="s2id_autogen6" class="select2-offscreen"></label>
+        <input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-6" id="s2id_autogen6">
+    </div>
+    <input type="hidden" class="select2_box" style="width: 300px; display: none;" tabindex="-1" title="">
+    <!-- select2 通过ajax end -->
+</div>
+<script type="text/javascript">
+    // select2 通过ajax数据生成
+    // 数据格式：{"results":[{ "id": 0, "text": "奥迪" }, { "id": 1, "text": "奔驰" }, { "id": 2, "text": "宝马" }]}
+    // alert(2)
+    $("#plugin3_demo3 .select2_box").select2({
+        ajax: {
+            url: "/getBusiness/",
+            cache: false,
+            //对返回的数据进行处理
+            results: function(data){
+                return data;
+            }
+        }
+
+    });
+</script>
